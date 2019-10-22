@@ -4,14 +4,7 @@ import { Grid } from '@material-ui/core';
 
 function Todo() {
 
-    var courses = [{ nombre: "Interaccion Socio-Tecnologica" },
-    { nombre: "Programacion Web" },
-    { nombre: "Proyecto Integrador" },
-    { nombre: "Gestion de Proyectos" },
-    { nombre: "Fundamentos de Derecho" },
-    ]
-
-
+    
     return <div className=''>
         <h1>Lista de materias</h1>
         <Grid container spacing={3} direction={"column"} >

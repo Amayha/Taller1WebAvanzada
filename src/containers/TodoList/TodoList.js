@@ -1,21 +1,22 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TodoCard from '../../components/Todocard/TodoCard';
+import Tareas from '../../components/Tareas/Tareas';
 import { flexbox } from '@material-ui/system';
 import TaskForm from '../../components/TaskForm/TaskForm';
 
 
-function Todo() {
+function TodoList(props) {
 
-    const [tareas, setTareas] = React.useState([]);
+    //const [tareas, setTareas] = React.useState([]);
 
     const addTarea = tarea => {
-        const objTarea = { idTarea: Date(), titulo: tarea};
-        const nuevaTarea = [...tareas, objTarea];
-        setTareas(nuevaTarea);
+        const objTarea = { idTarea: Date.now(), titulo: tarea};
+        //const nuevaTarea = [...tareas, objTarea];
+        //setTareas(nuevaTarea);
+        props.addTareaMateria(objTarea);
         console.log('Trea adicionada..' + tarea);
     }
-
+/*
     const delTarea = llave => {
         var nuevaListaTareas = tareas.filter(function (item){
             console.log(item.idTarea + ' <> ' + llave);
@@ -24,11 +25,17 @@ function Todo() {
         console.log(nuevaListaTareas);
         setTareas(nuevaListaTareas);
     }
+
+    const chulearTarea = (tarea)=>{
+       //setTareas.
+        console.log(tarea.estadoTarea);
+    }
+*/
+console.log(props.materia);
     return (
         <div>
             <TaskForm addTarea={addTarea} />
-            <TodoCard tareas={tareas}
-                    delete={delTarea}
+            <Tareas tareas={props.materia.tareas}
             />
         </div>
     )
@@ -47,4 +54,4 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-export default Todo;
+export default TodoList;

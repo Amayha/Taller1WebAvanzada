@@ -10,19 +10,33 @@ import FlipMove from "react-flip-move";
 
 function TodoCard(props) {
     console.log('Dentro de tareas');
+    var estado;
+    const classes = useStyles();
+
     const crearTarea = (ta) => {
         return (
-            <li onClick={() => borrarTarea(ta.idTarea)}
-                key={ta.idTarea} >
-                {ta.titulo}
+            <li onClick={() => borrarTarea(ta.idTarea)} className={classes.lista} >
+                <Card key={ta.idTarea}>
+                    <CardContent>
+                        {ta.titulo}
+                        <Checkbox checked={estado}></Checkbox>
+                    </CardContent>
+
+                </Card>
+
             </li>
+
         )
     }
 
     function borrarTarea(llave) {
         console.log('borrarTarea: ' + llave);
-        props.delete(llave);
+        //  props.delete(llave);
     }
+
+   /* function actualizarEstadoTarea(ta) {
+        props.chulear(ta);
+    }*/
 
     var listadotareas = props.tareas;
     var listadoItems = listadotareas.map(crearTarea);
@@ -40,7 +54,11 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
     },
-   
+    lista: {
+        display: 'flex',
+        listStyleType: 'none',
+    },
+
 });
 
 export default TodoCard;

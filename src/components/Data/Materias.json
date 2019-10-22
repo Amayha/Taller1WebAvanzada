@@ -1,0 +1,29 @@
+[
+    {
+        "idMateria": 1,
+        "titulo": "Materia 1",
+        "description": "lorem ipsum...tarea1",
+        "tareas": [
+
+        ],
+        "done": false
+    },
+    {
+        "idMateria": 2,
+        "titulo": "Materia 2",
+        "description": "lorem ipsum...tarea2",
+        "tareas": [
+
+        ],
+        "done": false
+    },
+    {
+        "idMateria": 3,
+        "titulo": "Materia 3",
+        "description": "lorem ipsum...tarea3",
+        "tareas": [
+
+        ],
+        "done": false
+    }
+]

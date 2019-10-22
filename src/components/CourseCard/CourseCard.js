@@ -13,7 +13,7 @@ function CourseCard(props) {
             <Card className={classes.card}>
                 <CardContent>
                     <Typography variant="h5" component="h2">
-                        {props.nombre}
+                        {props.titulo}
                     </Typography>
                     <br/>
                     <ProgressBar></ProgressBar>
