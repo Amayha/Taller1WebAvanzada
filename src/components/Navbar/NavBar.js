@@ -1,34 +1,36 @@
 import React from 'react';
 import { makeStyles, BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import PieChartIcon from '@material-ui/icons/PieChart';
-import ViewListIcon from '@material-ui/icons/ViewList';
-import FaceIcon from '@material-ui/icons/Face';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
 
     const classes = useStyles();
-    const [value, setValue] = React.useState('home');
-
-    function handleChange(event, newValue) {
-        setValue(newValue);
-    }
-
-
     return (
-        <BottomNavigation  value={value} onChange={handleChange} className={classes.root}>
-            <BottomNavigationAction label="Home" value="home" icon={<ViewListIcon />} />
-            <BottomNavigationAction label="Stats" value="stats" icon={<PieChartIcon />} />
-            <BottomNavigationAction label="About Us" value="about" icon={<FaceIcon />} />
-            
-        </BottomNavigation>
+        <div className={classes.nav}>
+            <div>
+                <Link to="/">Home </Link>
+            </div>
+            <div>
+                <Link to="/stats">Stats </Link>
+            </div>
+            <div>
+                <Link to="/about">About</Link>
+            </div>
+
+        </div>
     );
 }
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: '100%',
-        background : '#fbd1a6',
-    }
-}));
+const useStyles = makeStyles({
+    nav: {
+        backgroundColor: '#ffebed',
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        height: '50px',
+    },
+
+
+});
 
 export default NavBar;

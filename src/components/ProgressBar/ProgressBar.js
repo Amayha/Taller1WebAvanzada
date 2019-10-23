@@ -4,13 +4,14 @@ import LinearProgress from '@material-ui/core/LinearProgress';
 
 //esta grafica es para cada materia, se obtiene segun las tareas cumplidas 
 
-function ProgressBar() {
+function ProgressBar(props) {
     const classes = useStyles();
     const [completed, setCompleted] = React.useState(0);
     const [buffer, setBuffer] = React.useState(10);
-    var tasksCompleted = 70;
+    var tasksCompleted = props.completado;
    
     const progress = React.useRef(() => { });
+
     React.useEffect(() => {
         setCompleted(tasksCompleted);
         progress.current = () => {
