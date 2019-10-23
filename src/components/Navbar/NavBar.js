@@ -35,8 +35,9 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        height: '50px',
+        height: '70px',
         alignItems: 'center',
+        padding: '0px',
     },
     a: {
         textDecoration: 'none',

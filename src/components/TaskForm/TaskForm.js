@@ -23,7 +23,7 @@ function TaskForm(props) {
     return (
         <div>
             <form onSubmit={onSubmit} className={classes.forma}>
-                <div>
+                <div className={classes.text}>
                     <input
                         type="text"
                         placeholder="Ingrese la tarea ..."
@@ -33,7 +33,7 @@ function TaskForm(props) {
                     >
                     </input>
                 </div>
-                <div>
+                <div className={classes.enviar}>
                     <input type="submit" className={classes.boton}></input>
                 </div>
 
@@ -45,16 +45,24 @@ function TaskForm(props) {
 const useStyles = makeStyles({
     input: {
         height: '25px',
-        width: '300px',
-        border: '2px solid #71ccd5',
+        width: '500px',
+        border: '2px solid #3f51b5',
         borderRadius: '10px',
         padding: '5px',
+    },
+    text:{
+        paddingLeft: '30px',
+    },
+    enviar:{
+        paddingRight: '50px',
     },
 
     forma:{
         display: 'flex',
         flexDirection:'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-between',
+        listStyle: 'none',
+        paddingLeft: '0',
 
     },
 
@@ -62,7 +70,7 @@ const useStyles = makeStyles({
         height: '50px',
         width: '100px',
         color: '#fff',
-        background:'#60a3bc',
+        background:'#3f51b5',
         borderRadius: '50px',
         border: 'none',
         transition: 'all 0.4s ease 0s',

@@ -90,7 +90,7 @@ const useStyles = makeStyles({
 
     rigth: {
         flexBasis: '50%',
-        backgroundColor: '#fffcd6',
+        
     }
 
 });

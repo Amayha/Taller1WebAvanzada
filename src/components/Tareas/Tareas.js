@@ -20,12 +20,10 @@ function TodoCard(props) {
                 <Card key={ta.idTarea} className={classes.card}>
                     <CardContent className={classes.contenido}>
                         {ta.titulo}
-                        <div>
+                        <div className={classes.chulo}>
                             <Checkbox checked={estado}
                                 onClick={() => tareaCompleta(ta.idTarea)}
-                            >
-
-                            </Checkbox>
+                            ></Checkbox>
                         </div>
 
                     </CardContent>
@@ -72,6 +70,12 @@ const useStyles = makeStyles({
     contenido: {
         display: 'flex',
         flexDirection: 'row',
+        width: '100%',
+        height: '100%',
+    },
+    chulo:{
+        display: 'flex',
+        justifyContent: 'flex-end',
     },
 
 });

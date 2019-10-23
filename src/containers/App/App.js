@@ -73,7 +73,7 @@ const useStyles = makeStyles({
   rigth: {
     flexBasis: '50%',
   },
-  contenedor:{
+  contenedor: {
     fontFamily: 'Century Gothic, Lato, sans-serif',
   },
 

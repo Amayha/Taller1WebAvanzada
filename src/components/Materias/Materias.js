@@ -83,6 +83,7 @@ const useStyles = makeStyles({
         paddingLeft: '20px',
         margin: '20px',
         marginBottom: '100px',
+        minHeight: '700px',
     },
     sub:{
         display: 'flex',
