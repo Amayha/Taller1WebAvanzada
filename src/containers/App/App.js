@@ -30,7 +30,7 @@ function App() {
   return (
     <MateriasDataCtx.Provider value={context} >
       <Router>
-        <div>
+        <div className={classes.contenedor}>
           {/* A <Switch> looks through its children <Route>s and
       renders the first one that matches the current URL. */}
           <Switch>
@@ -72,7 +72,10 @@ const useStyles = makeStyles({
 
   rigth: {
     flexBasis: '50%',
-  }
+  },
+  contenedor:{
+    fontFamily: 'Century Gothic, Lato, sans-serif',
+  },
 
 });
 

@@ -9,24 +9,24 @@ function Materias(props) {
 
     const crearMateria = (ma) => {
         //Calcular el % de tareas completadas
-        var totTareas=0;
-        var nTareasCompletadas=0;
+        var totTareas = 0;
+        var nTareasCompletadas = 0;
         ma.tareas.forEach(tarea => {
             totTareas += 1;
-            if(tarea.completada){
+            if (tarea.completada) {
                 nTareasCompletadas += 1;
-                console.log('% completada adicionado: ' + nTareasCompletadas );
+                console.log('% completada adicionado: ' + nTareasCompletadas);
             }
         });
         var completado = 0;
-        if(totTareas != 0) 
+        if (totTareas != 0)
             completado = Math.floor(nTareasCompletadas / totTareas * 100);
-        
-        console.log('% completada: ' + completado + ' totTareas: ' +  totTareas);
 
-        if(ma.idMateria === props.materiaSelect + 1){
+        console.log('% completada: ' + completado + ' totTareas: ' + totTareas);
+
+        if (ma.idMateria === props.materiaSelect + 1) {
             var cssCard = classes.materiaSelect;
-        }else{
+        } else {
             var cssCard = classes.materiaNoSelect;
         }
         return (
@@ -57,38 +57,79 @@ function Materias(props) {
     var listadoItems = listadoMaterias.map(crearMateria);
 
     return (
-        <div>
-            <h1>Materias...</h1>
-            <ul>
-                <FlipMove duration={250} easing="ease-out">
-                    {listadoItems}
-                </FlipMove>
-            </ul>
-        </div>
+        <Card className={classes.contenedor}>
+            <div className={classes.sub}>
+                <div >
+                    <h1 classes={classes.tituloMaterias}>Materias</h1>
+                </div>
+                <ul className={classes.lista}>
+                    <FlipMove duration={250} easing="ease-out">
+                        {listadoItems}
+                    </FlipMove>
+                </ul>
+
+            </div>
+
+        </Card>
     )
 }
 
 const useStyles = makeStyles({
+    contenedor: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        listStyleType: 'none',
+        paddingLeft: '20px',
+        margin: '20px',
+        marginBottom: '100px',
+    },
+    sub:{
+        display: 'flex',
+        flexDirection: 'column',
+    },
+
     lista: {
         display: 'flex',
         listStyleType: 'none',
-    },
-    card: {
-        height: '150px',
-        margin: '10px',
+        margin: '20px',
+        marginTop: '0px',
+        listStyle: 'none',
+        paddingLeft: '0',
+        width: '100%',
+        height: '100%',
+
     },
     title: {
         fontSize: 20,
+
     },
     barra: {
         paddingRight: '10px',
         paddingLeft: '10px',
     },
     materiaSelect: {
-        backgroundColor: "#ff7755"
+        backgroundColor: "#66b1f1",
+        color: '#ffffff',
+        height: '150px',
+        width: '700px',
+        margin: '15px',
+        marginLeft:'0px',
     },
     materiaNoSelect: {
-        backgroundColor: "#ffffff"
+        backgroundColor: "#ffffff",
+        height: '150px',
+        width: '700px',
+        margin: '15px',
+        marginLeft:'0px',
+    },
+    tituloMaterias: {
+        padding: '30px',
+        paddingBottom: '0px',
+        backgroundColor: "#ff7755",
+        color: '#3f51b5',
+        flexDirection: 'row',
+        justifyContent: 'center',
     },
 
 });

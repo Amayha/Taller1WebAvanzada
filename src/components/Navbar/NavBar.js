@@ -6,29 +6,75 @@ function NavBar() {
 
     const classes = useStyles();
     return (
-        <div className={classes.nav}>
-            <div>
-                <Link to="/">Home </Link>
-            </div>
-            <div>
-                <Link to="/stats">Stats </Link>
-            </div>
-            <div>
-                <Link to="/about">About</Link>
+        <div>
+            <div className={classes.nav}>
+                <div className={classes.contenedor}>
+                    <Link to="/" className={classes.a}>Home </Link>
+                </div>
+                <div className={classes.contenedor}>
+                    <Link to="/stats" className={classes.a}>Stats </Link>
+                </div>
+                <div className={classes.contenedor}>
+                    <Link to="/about" className={classes.a}>About</Link>
+                </div>
+
             </div>
 
+            <div>
+                <hr className={classes.linea}></hr>
+            </div>
         </div>
     );
 }
 
 const useStyles = makeStyles({
     nav: {
-        backgroundColor: '#ffebed',
+        fontFamily: 'Century Gothic, Lato, sans-serif',
+        textDecoration: 'none',
+        fontSize:'150%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         height: '50px',
+        alignItems: 'center',
     },
+    a: {
+        textDecoration: 'none',
+        color: 'black',
+    },
+    contenedor: {
+        display: 'flex',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        width: '33%',
+        height: '40px',
+        backgroundColor: '#ffffff',
+        margin:'0px',
+        padding: '0px',
+
+        '& :hover': {
+            color: '#ffffff',
+            backgroundColor: '#66b1f1',
+            transition: 'all 0.5s ease',
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            alignItems: 'center',
+            width: '100%',
+            height: '100%',
+            margin:'0px',
+            padding: '0px',
+        },
+
+    },
+    linea: {
+        width: '100%',
+        height: '3px',
+        backgroundColor: '#66b1f1',
+        border: 'none',
+        margin:'0px',
+        padding: '0px',
+    },
+
 
 
 });

@@ -19,14 +19,14 @@ const useStyles = makeStyles(theme => ({
 
     contenedor:{
         display: 'flex',
-        background: '#dcf8c6',
+        background: '#52a6e0',
         flexDirection: 'row',
         justifyContent : 'center',
     },
 
     titulo:{
        
-        color: '#52a6e0',
+        color: '#ffffff',
         fontSize: 50,
     },
 
