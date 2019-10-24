@@ -4,6 +4,7 @@ import ProgressCircle from '../../components/ProgressCircle/ProgressCircle';
 import { makeStyles } from '@material-ui/core/styles';
 import { flexbox } from '@material-ui/system';
 import { VictoryPie } from 'victory';
+import Card from '@material-ui/core/Card';
 
 function Stats() {
     const classes = useStyles();
@@ -25,7 +26,9 @@ function Stats() {
 
         var datosTabular = [];
         if (totTareas > 0) {
-            datosTabular = [ { x: 2, y: nTareasCompletadas, nombreEje: "Completadas", nombreMateria: materia.titulo },{ x: 1, y: nTareasNoCompletadas, nombreEje: "Sin Completar", nombreMateria: materia.titulo }];
+            datosTabular = [
+                 { x: 2, y: nTareasCompletadas, nombreEje: "Completadas", nombreMateria: materia.titulo },
+                 { x: 1, y: nTareasNoCompletadas, nombreEje: "Sin Completar", nombreMateria: materia.titulo }];
         } else {
             datosTabular = [
                 { x: 2, y: 0,  nombreMateria: materia.titulo, nombreEje: "Completadas" },
@@ -40,8 +43,9 @@ function Stats() {
 
     const listItems = datosMateria.map((materia) => {
         return (
-            <div className={classes.contenedor} >
+            <Card className={classes.contenedor} >
                 <h1>{materia[0].nombreMateria}</h1>
+                
                 <VictoryPie data={materia}
                     
                     innerRadius={70}
@@ -51,7 +55,7 @@ function Stats() {
                     style={{ labels: { fill: "black", fontSize: 16, fontWeight: "regular", fontFamily: 'Century Gothic, Lato, sans-serif, Bold' } }}
                     labels={({ datum }) => `${datum.nombreEje}: ${datum.y}`}
                 />
-            </div>
+            </Card>
         )
     });
 
@@ -75,7 +79,7 @@ function Stats() {
 const useStyles = makeStyles({
     circle: {
         flexDirection: 'row',
-        backgroundColor: '#ffed4c',
+        //backgroundColor: '#ffed4c',
         flexFlow: 'row wrap',
         display: 'flex',
         width: '100%',
@@ -91,7 +95,7 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         //justifyContent: 'center',
-        backgroundColor: '#ef7b7e',
+        //backgroundColor: '#ef7b7e',
         flexFlow: 'row wrap',
     },
 
@@ -107,7 +111,7 @@ const useStyles = makeStyles({
     contenedor: {
         display: 'flex',
         flexDirection: 'column',
-       
+       margin: '10px',
         width: '400px',
 
     },

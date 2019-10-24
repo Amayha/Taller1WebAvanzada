@@ -1,8 +1,8 @@
 [
     {
         "idMateria": 1,
-        "titulo": "Materia 1",
-        "description": "lorem ipsum...tarea1",
+        "titulo": "Web Avanzada",
+        "description": "Donde aprendemos React",
         "tareas": [
 
         ],
@@ -10,8 +10,8 @@
     },
     {
         "idMateria": 2,
-        "titulo": "Materia 2",
-        "description": "lorem ipsum...tarea2",
+        "titulo": "PI 2",
+        "description": "Donde trabajamos sin remuneración",
         "tareas": [
 
         ],
@@ -19,8 +19,8 @@
     },
     {
         "idMateria": 3,
-        "titulo": "Materia 3",
-        "description": "lorem ipsum...tarea3",
+        "titulo": "STI",
+        "description": "Donde hacemos pruebas de usuario",
         "tareas": [
 
         ],
@@ -28,8 +28,8 @@
     },
     {
         "idMateria": 4,
-        "titulo": "Materia 4",
-        "description": "lorem ipsum...tarea3",
+        "titulo": "Derecho",
+        "description": "Nos toca verla",
         "tareas": [
 
         ],

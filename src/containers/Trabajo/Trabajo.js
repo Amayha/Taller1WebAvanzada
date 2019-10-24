@@ -1,6 +1,5 @@
 import React from 'react';
 import ToDoList from '../../containers/TodoList/TodoList';
-import MateriasData from '../../components/Data/Materias.json';
 import Materias from '../../components/Materias/Materias'
 import { makeStyles } from '@material-ui/core/styles';
 import MateriasDataCtx from '../../components/MateriasDataCtx/MateriasDataCtx';
@@ -14,7 +13,7 @@ function Trabajo(props) {
     //Cuando inicia se supone es la primer materia
     //const [materiaSelect, setMateriaSelect] = React.useState(0);
 
-    const actualizaMateriaSelect = materiaSelect => {
+    const actualizaMateriaSelect = materiaSelect => {// llega la materia a la que se le clikeo y se setea
         datos.setMateriaSelect(materiaSelect);
         console.log("MateriaSelect: " + materiaSelect);
     }
