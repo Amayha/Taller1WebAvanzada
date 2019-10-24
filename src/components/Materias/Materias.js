@@ -11,6 +11,7 @@ function Materias(props) {
         //Calcular el % de tareas completadas
         var totTareas = 0;
         var nTareasCompletadas = 0;
+        
         ma.tareas.forEach(tarea => {
             totTareas += 1;
             if (tarea.completada) {
