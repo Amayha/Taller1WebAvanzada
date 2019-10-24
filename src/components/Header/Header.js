@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
        
         color: '#ffffff',
         fontSize: 50,
+        fontFamily: 'Century Gothic, Lato, sans-serif',
     },
 
 }));

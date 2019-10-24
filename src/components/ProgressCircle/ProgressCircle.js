@@ -8,10 +8,9 @@ function ProgressCircle() {
     const classes = useStyles();
 
     var data = [
-        { x: "Cats", y: 35 },
-        { x: "Dogs", y: 40 },
-        { x: "Birds", y: 55 },
-        { x: "Bear", y: 5 }
+        { x: "Done", y: 5 },
+        { x: "Not yet", y: 15 },
+
     ];
 
 
@@ -22,6 +21,11 @@ function ProgressCircle() {
                 animate={{
                     duration: 2000
                 }}
+                innerRadius={70}
+                colorScale={["#3f51b5", "#e6e6e6",]}
+                labels={({ datum }) => datum.x}
+                labelPosition="centroid"
+                style={{ labels: { fill: "black", fontSize: 16, fontWeight: "regular", fontFamily:'Century Gothic, Lato, sans-serif'} }}
             />
         </div>
     );
@@ -29,11 +33,11 @@ function ProgressCircle() {
 
 const useStyles = makeStyles({
     contenedor: {
-        height: '500px',
-        width: '500px',
-        
+        height: '400px',
+        width: '400px',
+
     },
- 
+
 
 });
 

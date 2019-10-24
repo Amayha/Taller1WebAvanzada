@@ -51,7 +51,8 @@ function App() {
             </Route>
 
             <Route path="/about">
-              <h1>Pagina About</h1>
+            <Header></Header>
+              <NavBar></NavBar>
             </Route>
 
           </Switch>
