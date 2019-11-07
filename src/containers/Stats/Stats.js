@@ -62,7 +62,7 @@ function Stats() {
     return (
         <div className={classes.cont}>
             <div className={classes.texto}>
-                <p className={classes.textico}>Aqui puedes encontrar tus estadisticas diarias</p>
+                <p className={classes.textico}>Aqui puedes encontrar tus estadisticas</p>
             </div>
             <div className={classes.graficos}>
                 <div className={classes.circle}>
