@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/Taller1WebAvanzada/static/js/main.801bcea2.chunk.js",
+    "main.js.map": "/Taller1WebAvanzada/static/js/main.801bcea2.chunk.js.map",
+    "runtime-main.js": "/Taller1WebAvanzada/static/js/runtime-main.24d42560.js",
+    "runtime-main.js.map": "/Taller1WebAvanzada/static/js/runtime-main.24d42560.js.map",
+    "static/js/2.14ca841f.chunk.js": "/Taller1WebAvanzada/static/js/2.14ca841f.chunk.js",
+    "static/js/2.14ca841f.chunk.js.map": "/Taller1WebAvanzada/static/js/2.14ca841f.chunk.js.map",
+    "index.html": "/Taller1WebAvanzada/index.html",
+    "precache-manifest.f6958da7ea16c54e338d74acc2d43652.js": "/Taller1WebAvanzada/precache-manifest.f6958da7ea16c54e338d74acc2d43652.js",
+    "service-worker.js": "/Taller1WebAvanzada/service-worker.js"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.24d42560.js",
+    "static/js/2.14ca841f.chunk.js",
+    "static/js/main.801bcea2.chunk.js"
+  ]
+}
